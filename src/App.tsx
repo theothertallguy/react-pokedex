@@ -2,12 +2,12 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import './App.css'
 import PokemonCard from './PokemonCard'
-import { GameClient, type NamedAPIResource, type Pokemon, PokemonClient, type PokemonType } from 'pokenode-ts'; // import the GameClient
+import { GameClient, type NamedAPIResource, type Pokemon, PokemonClient } from 'pokenode-ts'; // import the GameClient
 import DetailedPokemon from './DetailedPokemon';
 
 
 function App() {
-  const [pokemonNames, setPokemonNames] = useState<NamedAPIResource[]>([])
+  const [, setPokemonNames] = useState<NamedAPIResource[]>([])
   const [pokemon, setPokemon] = useState<Pokemon[]>([])
   const [filter, setFilter] = useState("")
   const [favourite, setFavourite] = useState(false)
